@@ -32,16 +32,7 @@ function initApp() {
             user.getIdToken().then((accessToken) => {
                 document.getElementById('sign-in-status').textContent = 'Signed in';
                 document.getElementById('sign-in').textContent = 'Sign out';
-                document.getElementById('account-details').textContent = JSON.stringify({
-                    displayName: displayName,
-                    email: email,
-                    emailVerified: emailVerified,
-                    phoneNumber: phoneNumber,
-                    photoURL: photoURL,
-                    uid: uid,
-                    accessToken: accessToken,
-                    providerData: providerData
-                }, null, '  ');
+
             });
 
         } else {
