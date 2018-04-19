@@ -71,7 +71,6 @@ const ui = new firebaseui.auth.AuthUI(firebase.auth());
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
 
-
 database.on("value", function (snapshot) {
     let list = document.getElementById('listPerso');
     list.innerHTML = "";
@@ -83,8 +82,6 @@ database.on("value", function (snapshot) {
             listPerso.textContent = perso.name;
             list.appendChild(listPerso);
         }
-
-
     });
 });
 
